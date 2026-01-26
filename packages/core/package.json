@@ -1,6 +1,6 @@
 {
   "name": "@yuw-cli-dev/core",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "> TODO: description",
   "author": "yuwei <yuwei@huya.com>",
   "homepage": "",
@@ -20,7 +20,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@yuw-cli-dev/utils": "^1.0.24"
+    "@yuw-cli-dev/utils": "^1.0.25"
   },
   "gitHead": "3397cdd3c25ab19e504485537f0a482317776017",
   "publishConfig": {
