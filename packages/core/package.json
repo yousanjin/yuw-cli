@@ -1,0 +1,22 @@
+{
+  "name": "@yuw-cli-dev/core",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "yuwei <yuwei@huya.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@yuw-cli-dev/utils": "^0.0.0"
+  }
+}
