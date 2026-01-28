@@ -7,7 +7,7 @@
   "license": "ISC",
   "main": "lib/core.js",
   "bin": {
-    "yuw-cli": "bin/index.js"
+    "yuw-cli-dev": "bin/index.js"
   },
   "directories": {
     "lib": "lib",
@@ -20,7 +20,16 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@yuw-cli-dev/utils": "^1.0.35"
+    "@yuw-cli-dev/log": "file:../../utils/log",
+    "@yuw-cli-dev/utils": "file:../../utils/utils",
+    "colors": "^1.4.0",
+    "dotenv": "^17.2.3",
+    "import-local": "^3.2.0",
+    "minimist": "^1.2.8",
+    "npmlog": "^7.0.1",
+    "path-exists": "^4.0.0",
+    "root-check": "^1.0.0",
+    "user-home": "^3.0.0"
   },
   "gitHead": "f0cd1a284537c1d9da4d9d7c9b0d2647f603a14a",
   "publishConfig": {
