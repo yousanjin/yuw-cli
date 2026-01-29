@@ -1,6 +1,6 @@
 {
   "name": "@yuw-cli-dev/core",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "description": "> TODO: description",
   "author": "yuwei <yuwei@huya.com>",
   "homepage": "",
@@ -20,11 +20,11 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
+    "@yuw-cli-dev/exec": "file:../exec",
     "@yuw-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "@yuw-cli-dev/init": "file:../../commands/init",
     "@yuw-cli-dev/log": "file:../../utils/log",
     "@yuw-cli-dev/utils": "file:../../utils/utils",
-    "@yuw-cli-dev/init": "file:../../commands/init",
-    "@yuw-cli-dev/exec": "file:../exec",
     "colors": "^1.4.0",
     "commander": "^14.0.2",
     "dotenv": "^17.2.3",
