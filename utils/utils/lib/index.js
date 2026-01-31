@@ -3,4 +3,9 @@
 function isObject(o) {
   return Object.prototype.toString.call(o) === "[object Object]";
 }
-module.exports = { isObject };
+
+function normalizePath(path) {
+  return path.replace(/[\\/]+/g, "/");
+}
+
+module.exports = { isObject, normalizePath };

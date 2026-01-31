@@ -1,13 +1,17 @@
 "use strict";
 
 const path = require("path");
+const slash = require("slash");
+const cp = require("child_process");
 const Package = require("@yuw-cli-dev/package");
 const log = require("@yuw-cli-dev/log");
+const { normalizePath } = require("@yuw-cli-dev/utils");
 
 const SETTINGS = {
   init: "@yuw-cli-dev/init",
 };
 const CACHE_DIR = "dependencies";
+
 async function exec() {
   let targetPath = process.env.CLI_TARGET_PATH;
   let storeDir = "";
@@ -36,9 +40,10 @@ async function exec() {
       packageVersion,
     });
 
-    if (pkg.exists()) {
+    if (await pkg.exists()) {
       // 更新package
-      pkg.update();
+      console.log("update package");
+      await pkg.update();
     } else {
       // 安装package
       await pkg.install();
@@ -52,7 +57,44 @@ async function exec() {
   }
   const rootFile = pkg.getRootFilePath();
   if (rootFile) {
-    require(rootFile).call(null, ...arguments);
+    try {
+      const args = Array.from(arguments);
+      const o = Object.create(null);
+      const cmdObj = args[args.length - 1];
+      Object.keys(cmdObj).forEach((key) => {
+        if (
+          cmdObj.hasOwnProperty(key) &&
+          !key.startsWith("_") &&
+          key !== "parent"
+        ) {
+          o[key] = cmdObj[key];
+        }
+      });
+      args[args.length - 1] = o;
+      const code = `require('${normalizePath(rootFile)}').call(null, ${JSON.stringify(args)})`;
+      const child = spawn("node", ["-e", code], {
+        cwd: process.cwd(),
+        stdio: "inherit",
+      });
+      child.on("error", (e) => {
+        log.error(e.message);
+        process.exit(1);
+      });
+      child.on("exit", (e) => {
+        log.verbose("命令执行成功:" + e);
+        process.exit(e);
+      });
+    } catch (error) {
+      log.error(error.message);
+    }
   }
 }
+
+function spawn(command, args, options) {
+  const win32 = process.platform === "win32";
+  const cmd = win32 ? "cmd" : command;
+  const cmdArgs = win32 ? ["/c"].concat(command, args) : args;
+  return cp.spawn(cmd, cmdArgs, options || {});
+}
+
 module.exports = exec;

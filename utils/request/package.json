@@ -1,7 +1,7 @@
 {
-  "name": "@yuw-cli-dev/init",
+  "name": "@yuw-cli-dev/request",
   "version": "1.0.37",
-  "description": "yuw-cli-dev init",
+  "description": "request package",
   "author": "yuwei <yuwei@huya.com>",
   "homepage": "https://github.com/yousanjin/yuw-cli#readme",
   "license": "ISC",
@@ -27,12 +27,6 @@
     "url": "https://github.com/yousanjin/yuw-cli/issues"
   },
   "dependencies": {
-    "@yuw-cli-dev/command": "file:../../models/command",
-    "@yuw-cli-dev/log": "file:../../utils/log",
-    "@yuw-cli-dev/request": "file:../../utils/request",
-    "fs-extra": "^9.0.1",
-    "inquirer": "^7.3.3",
-    "semver": "^7.7.3",
-    "valid-filename": "^3.1.0"
+    "axios": "^1.13.4"
   }
 }

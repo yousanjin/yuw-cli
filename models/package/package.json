@@ -30,7 +30,9 @@
     "@yuw-cli-dev/format-path": "file:../../utils/format-path",
     "@yuw-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
     "@yuw-cli-dev/utils": "file:../../utils/utils",
-    "npminstall": "^8.0.1",
+    "fs-extra": "^9.1.0",
+    "npminstall": "^4.10.0",
+    "path-exists": "^4.0.0",
     "pkg-dir": "^5.0.0"
   }
 }
