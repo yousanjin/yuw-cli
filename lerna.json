@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "core/*",
+    "commands/*",
+    "utils/*",
+    "modules/*"
+  ],
+  "version": "1.0.38"
+}

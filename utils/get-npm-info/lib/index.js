@@ -1,0 +1,69 @@
+'use strict';
+
+const axios = require('axios');
+const semver = require('semver');
+const urlJoin = require('url-join');
+
+function getNpmInfo(npmName, registry) {
+  if (!npmName) {
+    return null;
+  }
+  const registryUrl = registry || getDefaultRegistry();
+  const npmInfoUrl = urlJoin(registryUrl, npmName);
+  return axios
+    .get(npmInfoUrl)
+    .then(response => {
+      if (response.status === 200) {
+        return response.data;
+      }
+      return null;
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
+}
+
+function getDefaultRegistry(isOriginal = true) {
+  return isOriginal
+    ? 'https://registry.npmjs.org'
+    : 'https://registry.npm.taobao.org';
+}
+
+async function getNpmVersions(npmName, registry) {
+  const data = await getNpmInfo(npmName, registry);
+  if (data) {
+    return Object.keys(data.versions);
+  }
+  return [];
+}
+
+function getSemverVersions(baseVersion, versions) {
+  return versions
+    .filter(version => semver.satisfies(version, `^${baseVersion}`))
+    .sort((a, b) => semver.gt(b, a));
+}
+
+async function getNpmSemverVersion(npmName, baseVersion, registry) {
+  const versions = await getNpmVersions(npmName, registry);
+  const semverVersions = getSemverVersions(baseVersion, versions);
+  if (semverVersions && semverVersions.length !== 0) {
+    return semverVersions[0];
+  }
+  return null;
+}
+
+async function getLatestNpmVersion(npmName, registry) {
+  const versions = await getNpmVersions(npmName, registry);
+  if (versions && versions.length !== 0) {
+    return versions.sort((a, b) => semver.gt(b, a))[versions.length - 1];
+  }
+  return null;
+}
+
+module.exports = {
+  getNpmInfo,
+  getNpmVersions,
+  getNpmSemverVersion,
+  getDefaultRegistry,
+  getLatestNpmVersion,
+};
