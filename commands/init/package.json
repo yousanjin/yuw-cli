@@ -30,6 +30,7 @@
     "@yuw-cli-dev/command": "^1.0.42",
     "@yuw-cli-dev/log": "^1.0.41",
     "@yuw-cli-dev/package": "^1.0.42",
+    "@yuw-cli-dev/request": "^1.0.41",
     "@yuw-cli-dev/utils": "^1.0.41",
     "ejs": "^4.0.1",
     "fs-extra": "^9.0.1",
