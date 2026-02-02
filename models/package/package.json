@@ -27,10 +27,10 @@
     "url": "https://github.com/yousanjin/yuw-cli/issues"
   },
   "dependencies": {
-    "@yuw-cli-dev/format-path": "file:../../utils/format-path",
-    "@yuw-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
-    "@yuw-cli-dev/log": "file:../../utils/log",
-    "@yuw-cli-dev/utils": "file:../../utils/utils",
+    "@yuw-cli-dev/format-path": "^1.0.41",
+    "@yuw-cli-dev/get-npm-info": "^1.0.41",
+    "@yuw-cli-dev/log": "^1.0.41",
+    "@yuw-cli-dev/utils": "^1.0.41",
     "fs-extra": "^9.1.0",
     "npminstall": "^4.10.0",
     "path-exists": "^4.0.0",

@@ -25,5 +25,11 @@
   },
   "bugs": {
     "url": "https://github.com/yousanjin/yuw-cli/issues"
+  },
+  "dependencies": {
+    "@yuw-cli-dev/init": "^1.0.41",
+    "@yuw-cli-dev/log": "^1.0.41",
+    "@yuw-cli-dev/package": "^1.0.41",
+    "@yuw-cli-dev/utils": "^1.0.41"
   }
 }
