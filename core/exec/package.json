@@ -1,6 +1,6 @@
 {
   "name": "@yuw-cli-dev/exec",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "description": "yuw-cli-dev execute package",
   "author": "yuwei <yuwei@huya.com>",
   "homepage": "https://github.com/yousanjin/yuw-cli#readme",
@@ -27,9 +27,9 @@
     "url": "https://github.com/yousanjin/yuw-cli/issues"
   },
   "dependencies": {
-    "@yuw-cli-dev/init": "^1.0.41",
+    "@yuw-cli-dev/init": "^1.0.42",
     "@yuw-cli-dev/log": "^1.0.41",
-    "@yuw-cli-dev/package": "^1.0.41",
+    "@yuw-cli-dev/package": "^1.0.42",
     "@yuw-cli-dev/utils": "^1.0.41"
   }
 }
