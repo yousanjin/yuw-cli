@@ -1,8 +1,6 @@
 'use strict';
 
 const path = require('path');
-const slash = require('slash');
-const cp = require('child_process');
 const Package = require('@yuw-cli-dev/package');
 const log = require('@yuw-cli-dev/log');
 const { normalizePath, exec: spawn } = require('@yuw-cli-dev/utils');

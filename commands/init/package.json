@@ -27,11 +27,6 @@
     "url": "https://github.com/yousanjin/yuw-cli/issues"
   },
   "dependencies": {
-    "@yuw-cli-dev/command": "file:../../models/command",
-    "@yuw-cli-dev/log": "file:../../utils/log",
-    "@yuw-cli-dev/package": "file:../../models/package",
-    "@yuw-cli-dev/request": "file:../../utils/request",
-    "@yuw-cli-dev/utils": "file:../../utils/utils",
     "ejs": "^4.0.1",
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
