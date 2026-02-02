@@ -1,6 +1,6 @@
 {
   "name": "@yuw-cli-dev/command",
-  "version": "1.0.37",
+  "version": "1.0.41",
   "description": "lib command",
   "author": "yuwei <yuwei@huya.com>",
   "homepage": "https://github.com/yousanjin/yuw-cli#readme",
@@ -27,7 +27,7 @@
     "url": "https://github.com/yousanjin/yuw-cli/issues"
   },
   "dependencies": {
-    "@yuw-cli-dev/log": "^1.0.39",
+    "@yuw-cli-dev/log": "^1.0.41",
     "colors": "^1.4.0",
     "semver": "^7.7.3"
   }

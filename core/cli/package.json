@@ -1,6 +1,6 @@
 {
   "name": "@yuw-cli-dev/core",
-  "version": "1.0.40",
+  "version": "1.0.41",
   "description": "> TODO: description",
   "author": "yuwei <yuwei@huya.com>",
   "homepage": "",
@@ -20,8 +20,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@yuw-cli-dev/exec": "^1.0.40",
-    "@yuw-cli-dev/log": "^1.0.39",
+    "@yuw-cli-dev/exec": "^1.0.41",
+    "@yuw-cli-dev/log": "^1.0.41",
     "colors": "^1.4.0",
     "commander": "^14.0.2",
     "dotenv": "^17.2.3",
