@@ -1,6 +1,6 @@
 {
   "name": "@yuw-cli-dev/exec",
-  "version": "1.0.39",
+  "version": "1.0.40",
   "description": "yuw-cli-dev execute package",
   "author": "yuwei <yuwei@huya.com>",
   "homepage": "https://github.com/yousanjin/yuw-cli#readme",
@@ -25,6 +25,5 @@
   },
   "bugs": {
     "url": "https://github.com/yousanjin/yuw-cli/issues"
-  },
-  "dependencies": {}
+  }
 }
